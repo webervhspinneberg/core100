@@ -539,7 +539,7 @@ class WISY_FRAMEWORK_CLASS
 	     However, these messages only work in the root directory (remember, we use relative paths, so whn requesting /abc/def/ghi.html all images, css etc. won't work).
 	     So, for errors outside the root directory, we use the global error404() function declared in /index.php */
 	    $uri = $_SERVER['REQUEST_URI']; // ok: htmlspecialchars applied later...
-	    if( substr_count($uri, '/') == 1 )
+	    if(substr_count($uri, '/') == 1 )
 	    {
 	        global $wisyCore;
 	        header("HTTP/1.1 404 Not Found");
